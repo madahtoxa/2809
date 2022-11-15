@@ -1,14 +1,15 @@
 public class Train extends Transport {
 
-    private int cost;
-    private String time;
-    private String station;
-    private String lastStation;
-    private int railwayСarriage;
+    final private int cost;
+    final private String time;
+    final private String station;
+    final   private String lastStation;
+    final   private int railwayСarriage;
 
     public Train(String brand, String model, int yearOut, String country, String color,
                  int speedMax, int cost, String time, String station, String lastStation, int railwayСarriage) {
         super(brand, model, yearOut, country, color, speedMax);
+        setYearOut(this.yearOut);
         this.cost = cost;
         this.time = time;
         this.station = station;

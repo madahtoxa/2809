@@ -1,13 +1,19 @@
 public abstract class Transport {
     final private String brand;
     final private String model;
-    final int yearOut;
+     int yearOut;
     final private String country;
     private String color;
     private int speedMax;
 
     protected abstract void refill(Boolean gasoline, Boolean disel, Boolean elec);
-
+    public void setYearOut(int yearOut) {
+        if (yearOut <= 0) {
+            this.yearOut = -1;
+        } else {
+            this.yearOut = yearOut;
+        }
+    }
     public void setColor(String color) {
         if (color != null) {
             this.color = color;
